@@ -1,5 +1,9 @@
 # Introduction
-Description of the project
+In this project our group was tasked with creating and understanding Hidden Markov models by implementing the Viterbi algorithm, which finds the most likely sequence of hidden states for a sequence of observations.
+
+Viterbi decoding is how an HMM turns a long, unlabelled sequence into an annotation. GENSCAN models the structure of human genes (exons, introns, splice sites, untranslated regions) as a probabilistic state machine and reports the most probable gene structure for a stretch of genomic DNA (Burge & Karlin, 1997). Then ChromHMM segments the genome into chromatin states from combinations of histone marks, assigning each region of the genome to a state such as "active promoter" or "repressed" (Ernst & Kellis, 2010, 2012). 
+
+This is a very versatile and extensive tool that is used in many applications of the bioinformatics field to annotate and reconstruct genomic data. 
 
 # Pseudocode
 
@@ -65,7 +69,7 @@ We didnt add a few thing checks he mentioned on the canvase page.
 
 # Personal Reflections
 ## Group Leader
-Group leader's reflection on the project
+This was my first project being a group leader so it was difficult at first for me to understand the steps I needed to take to ensure I was setting my team up for success. However, it was a quick learning curve and I think we did a great job collaborating and building this algorithm. I feel like I have kept developing my skill sets not only with Git but also coding.
 
 ## Other 
 Jake (Matthew): This project always seemed doable becuase I had a basic understanding of the algorithm after the lecture. I then used the HMM primer (Sherman, 2026) and the powerpoint presentation (Langmead, n.d.) on canvas to help make my understanding more concrete. From here I thought the implementation would be easy, but it ended up being more complicated than I expected. When you are doing something by hand its easy to get the probabilites you need, but then translating this into code can become involved. Getting all the required states and probabilites to do each calculation lead to the 3 nested for loop seen above. Marcus said at the end of class that if you go over 3 nested for loops you have gone to far, so that gave me some confidence 3 was the right number. Also, it was challengeing and interesting using OOP for this project. I used the GffEntry class from the data_readers.py provided script in the Gibbs sampling project as a structural guide. Like the last time, the traceback was confusing at first, but eventually it made sense. Overall, I thought the group made good use of the extra time and we now have a solid foundation for the next 2 projects.
