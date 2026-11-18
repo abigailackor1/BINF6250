@@ -62,10 +62,7 @@ class HMM:
 We were able to create two implementations of an HMM class, the one outlined above and another in alternate.ipynb. The alternate.ipynb uses dictionaries instead of numpy matrices, and takes inpiration form an example seen online (Viterbi Algorithm for Hidden Markov Models (HMMs), 2025). Both our HMM classes have a very similar structure and produce the same results for the "obs" sequence provide. We successed in not hardcoding anything, with the states and probabilites coming from the provided dictionaries. In our standard ipynb, we were also able to use log probabilities. This will help with future projects if we analyze longer sequences. Similarly, we beleive the OOP struture we set up in this project will help us down the line. Finally, our projec08.ipynb identified a 12bp CG repeat in the middle of a second observation as a CpG island, confirming the algorithm's functinoality.
 
 # Struggles
-We didnt add a few thing checks he mentioned on the canvase page. 
--we dont check that all probs in dictionaries add to 1
--we dont check that all states in the dictionaries are the same
--we dont handle the case were an observation has a value that is not in one of the dictionaries
+We were not able to implement a few checks mentioned on the canvase page. These include checking that all probabilities in dictionaries add to 1 checking that all states in the dictionaries are the same. We also dont handle the case were an observation has a value that is not in one of the dictionaries. If we are using more complicated data in the next module, these will be necessary to add. 
 
 # Personal Reflections
 ## Group Leader
