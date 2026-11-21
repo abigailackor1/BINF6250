@@ -1,9 +1,5 @@
 # Introduction
-In this project our group was tasked with creating and understanding Hidden Markov models by implementing the Viterbi algorithm, which finds the most likely sequence of hidden states for a sequence of observations.
-
-Viterbi decoding is how an HMM turns a long, unlabelled sequence into an annotation. GENSCAN models the structure of human genes (exons, introns, splice sites, untranslated regions) as a probabilistic state machine and reports the most probable gene structure for a stretch of genomic DNA (Burge & Karlin, 1997). Then ChromHMM segments the genome into chromatin states from combinations of histone marks, assigning each region of the genome to a state such as "active promoter" or "repressed" (Ernst & Kellis, 2010, 2012). 
-
-This is a very versatile and extensive tool that is used in many applications of the bioinformatics field to annotate and reconstruct genomic data. 
+In this project our group was tasked with creating and understanding Hidden Markov models by implementing the Viterbi algorithm. This an algorithm that assigns the most likely states to a series of observations using initial, transition, and emission probabilities. It does this by calculating the highest probability of every observation in all possible states and storing which previous state produced it. After doing these calculations for all observations, it assignes the last state to the state whith the highest probability at the end. Finally, it assigns all other states using the stored traceback infromation. In bioinformatics, this is a very versatile tool used in many applications, praticlarly genome annotation. In this project, we use our model to identify CpG islands in DNA sequences. 
 
 # Pseudocode
 
@@ -62,10 +58,7 @@ class HMM:
 We were able to create two implementations of an HMM class, the one outlined above and another in alternate.ipynb. The alternate.ipynb uses dictionaries instead of numpy matrices, and takes inpiration form an example seen online (Viterbi Algorithm for Hidden Markov Models (HMMs), 2025). Both our HMM classes have a very similar structure and produce the same results for the "obs" sequence provide. We successed in not hardcoding anything, with the states and probabilites coming from the provided dictionaries. In our standard ipynb, we were also able to use log probabilities. This will help with future projects if we analyze longer sequences. Similarly, we beleive the OOP struture we set up in this project will help us down the line. Finally, our projec08.ipynb identified a 12bp CG repeat in the middle of a second observation as a CpG island, confirming the algorithm's functinoality.
 
 # Struggles
-We didnt add a few thing checks he mentioned on the canvase page. 
--we dont check that all probs in dictionaries add to 1
--we dont check that all states in the dictionaries are the same
--we dont handle the case were an observation has a value that is not in one of the dictionaries
+We were not able to implement a few checks mentioned on the canvase page. These include checking that all probabilities in dictionaries add to 1 checking that all states in the dictionaries are the same. We also dont handle the case were an observation has a value that is not in one of the dictionaries. If we are using more complicated data in the next module, these will be necessary to add. 
 
 # Personal Reflections
 ## Group Leader
